@@ -78,7 +78,7 @@ The runtime may support an interactive code execution mode similar to Jupyter no
 The interactive mode may support `shell` language in addition to the host language if necessary, e.g `python`, `javascript` etc.
 
 Endpoints: 
-* GET `/interactive?code={str}&channel={str}&cellId={str}&language={str}
+* GET `/interactive?code={str}&channel={str}&cellId={str}&language={str}`
 * POST `/interactive?language={str}`
   ```
     {
@@ -98,7 +98,7 @@ Endpoints:
 
 ### During execution (success or error)
 ```
-  Event: 'cell_log',
+  Event: 'cell_result',
   Args: channel, notebookId, cellId, output: [...str of stdout], error: [...stderr if any, else empty]
 ```
 
